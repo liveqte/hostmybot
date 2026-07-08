@@ -14,7 +14,7 @@ import urllib.error
 from datetime import datetime, timezone
 
 PANEL_URL = "https://client.hostmybot.net"
-SERVER_ID = "51fcda5f"
+SERVER_ID = os.environ.get('SERVER_ID', '')  
 RENEW_COST = 50
 MAX_WAIT_MINUTES = 120       # 最多等 120 分钟
 CHECK_INTERVAL_SEC = 120     # 每 2 分钟检查一次
